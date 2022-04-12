@@ -1,0 +1,580 @@
+*{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+/* ACA EMPIEZA EL CSS PARA CELULAR FORMATO VERTICAL*/
+@media screen and (min-width: 320px) and (max-width: 500px) {
+
+body{
+    display: grid;
+    height: 100vh;
+}
+
+
+main{
+    background:linear-gradient(  #f7a435 , white);
+}
+
+.encabezado{
+    position:fixed;
+    width: 25vw;
+}
+.nav__ol, .submenu{
+    display: none;
+}
+
+header:hover .nav__ol{
+    position: fixed;
+    display: block;
+    left: 15vh;
+
+    height: 10vh;
+   
+    z-index: 2;    
+}
+
+.item--contacto:hover .submenu{
+    position: fixed;
+    display: block;
+    left: 15vh;
+
+    height: 10vh;
+   
+    z-index: 2;    
+}
+
+
+.item{
+    display: grid;
+    width: 85vw;
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color:  #d12230  ;
+}
+
+.subitem{
+    display: grid;
+    width: 50vw;
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color: gray  ;
+    justify-content: end;
+}
+.subitem a{
+    jus;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.item--contacto{
+
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color: #d12230  ;
+    color: white;
+    list-style-type: none;
+}
+
+/*main index de celular vertical*/
+
+.h1{
+    grid-area: h1;
+    font-size: 150%;
+    justify-self: end;
+    align-self: flex-end;
+    padding-right: 4vw;
+}
+
+.h3{
+    grid-area: h3;
+    justify-self: end;
+    align-self: flex-start;
+    padding-right: 4vw;
+
+}
+
+video{
+    width: 95vw;
+    grid-area: video;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.main__index{
+    display: grid;
+    grid-template-areas: 
+        "h1 h1 h1 "
+        "h3 h3 h3"
+        "video video video";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10vh 8vh 60vh ;
+    width: 100vw;
+}
+
+/*main quinessomos celular vertical*/
+.main__quienesSomos{
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 15vh 45vh 70vh 20vh;
+}
+
+.h2quienesSomos{
+    justify-self: end;
+    padding-top: 5vh;
+    padding-right: 1.5vh;
+}
+.img__quienesSomos{
+    width: 60vw;
+    align-self: center;
+    justify-self: center;
+}
+.p__quienesSomos{
+    width: 85vw;
+    justify-self: center;
+    text-align: center;
+}
+
+
+/*main contacto celular vertical*/
+
+.main__contacto{
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 15vh 70vh;
+}
+
+.h2__contacto{
+    width: 85vw;
+    text-align: end;
+    justify-self: end;
+    padding-top: 3vh;
+    padding-right: 1.5vh;
+}
+iframe{
+    width: 85vw;
+    height: 50vh;
+    align-self: center;
+    justify-self: center;
+}
+/*productos formato vertical celu*/ 
+
+
+#body__productos{
+    display: grid;
+    grid-template-rows: 210vh 22vh;
+}
+
+.main__productos{
+    display: grid;
+    grid-template-rows: 15vh 60vh 60vh 60vh 25vh;
+}
+.main__productos--div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.main__productos--div img{
+    width: 150px;
+    height: 150px ;
+}
+table{
+    height: 15vh;
+}
+.h2__productos{
+    color:  #0e0e0d ;
+    text-align: end;
+    justify-self: end;
+    padding-top: 3vh;
+    padding-right: 1.5vh;
+
+}
+
+
+
+/*familialabelle formato vertical celu*/
+.main__familiaLaBelle{
+    display: grid;
+    width: 100vw;
+    grid-template-rows: 15vh 125vh;
+}
+
+.h2__familiaLaBelle{
+    color:  #0e0e0d ;
+    text-align: end;
+    justify-self: end;
+    padding-top: 3vh;
+    padding-right: 1.5vh;
+}
+
+form{
+    padding-top: 20px;
+    width: 85vw;
+    justify-self: center;
+}
+
+.form__personal{
+    display: flex;
+    flex-direction: column;
+}
+h5{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.botones__familiaLaBelle{
+    display: grid;
+    grid-template-rows: 5vh 5vh;
+    row-gap: 3vh;
+    justify-items: end;
+    height: 20vh;
+}
+
+
+/* este es el footer para celular vertical*/
+
+.footer__index, #pie{
+    width: 97vw;
+    grid-area: footer;
+    align-self: flex-end;
+}
+.footer__index--ul{
+    display: grid;
+    grid-template-rows: 5.5vw 5.5vw 5.5vw;
+    grid-row-gap: 4vw;
+    padding-bottom: 3vw;
+    padding-right: 3vw;
+    align-self: flex-end;
+}
+
+.footer__index--li{
+    display: grid;
+    justify-self: end;
+
+    
+}
+
+footer ul li a{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+
+}
+
+
+
+/*ACA EMPIEZA EL CSS PARA ESCRITORIO*/
+@media screen and (min-width: 1200px) {
+
+
+/*esto es el header*/
+
+.encabezado{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition-duration:  1s;
+    opacity: 0.5;
+
+    width: 100px;
+    z-index: 3;
+}
+
+.encabezado:hover{
+    opacity: 1;
+}
+
+
+
+#encabezado{
+    z-index: 3;
+    width: 100px;
+    opacity: 1;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    animation-name: logo;
+    animation-duration: 10s;
+    animation-iteration-count: initial;
+}
+
+@keyframes logo {
+    0%{
+    
+        opacity: 0.1;
+        position: fixed;
+        right: 15vw;
+        top: 0px;
+        height: 100%;
+        width: auto;
+        
+
+
+    }
+    50%{
+        transform: translate(-30vw, );
+        position: fixed;
+        top: 0px;
+        left: 25.7vw;
+        opacity: 1;
+        width: auto;
+        height: 100%;
+
+    }
+    100%{
+        width: 100px;
+        opacity: 1;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
+    
+}
+
+.item{
+    display: grid;
+    cursor: pointer;
+
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color:  #d12230  ;
+    justify-self: center;
+}
+
+header{
+    display: grid;
+    align-content: center;
+}
+
+.nav{
+    display: grid;
+    width: 100vw;
+    height: 10vw;
+    position: fixed;   
+    justify-content: center;
+    align-content: center;
+   
+    z-index: 2;
+}
+
+.nav__ol {
+    display: grid;
+    justify-content: center;
+    width: 50vw;
+    grid-template-columns:  0.2fr 0.4fr 0.5fr 0.7fr 0.2fr;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.item--contacto{
+
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color: #d12230  ;
+    color: white;
+    list-style-type: none;
+}
+.submenu{
+    display: none;
+}
+
+.item--contacto:hover .submenu{
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr;
+    list-style-type: none;
+}
+
+.subitem{
+    background-color:  #d12230  ;
+}
+
+
+
+/*aca empieza el main*/
+
+
+main{
+    background:linear-gradient(  #f7a435 , white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+#main__index{
+    animation-iteration-count: inherit;
+    animation-duration: 15s;
+    animation-name: main__index;
+}
+
+@keyframes main__index {
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+video{
+    height: 55vh;
+}
+
+
+/*este es el main index*/
+h1 {
+    animation-name: rubberBand;
+    animation-delay: 10s;
+    animation-iteration-count: initial;
+    text-align: center;
+    padding-top: 110px; 
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: monospace;
+}
+
+H3{
+    color:  #0e0e0d ;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.descripcion{
+    overflow: hidden;
+    width: 600px;
+    height: 200px;
+    color: white;
+    text-align: center;
+
+    position: relative;
+    left: 300px;
+}
+/* main quienessomos*/
+
+.h2quienesSomos{
+    color:  #0e0e0d ;
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 20px;
+}
+
+p{
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*main productos*/
+
+.main__productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 1100px;
+}
+
+.main__productos--div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.h2__productos{
+
+    padding-top: 125px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+div img{
+    width: 200px;
+    height: 200px;
+    transition-duration:  1s;
+    opacity: 0.5;
+}
+div img:hover{
+    opacity: 1;
+}
+table{
+    margin-top: 30px;
+    background-color:  #aaaeaa ;
+}
+
+
+/*main familialabelle*/
+
+.h2__familiaLaBelle{
+    color:  #0e0e0d ;
+    text-align: center;
+    padding-top: 125px;
+}
+
+form{
+    padding-top: 20px;
+}
+
+.form__personal{
+    display: flex;
+    flex-direction: column;
+}
+h5{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+
+/*main contacto*/
+
+.h2__contacto{
+    color:  #0e0e0d ;
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 20px;
+}
+
+
+/* este es el footer*/
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    list-style-type: none;
+}
+
+
+footer li a{
+    color: black;
+    font-size: 15px;
+}
+
+
+.u {
+    list-style-type: none;
+}
+}
