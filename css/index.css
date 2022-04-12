@@ -520,8 +520,21 @@ div img:hover{
 table{
     margin-top: 30px;
     background-color:  #aaaeaa ;
+    animation-name: tabla;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
+@keyframes tabla {
+    0%{
+        background: radial-gradient(#d12230, white);
+    }
+
+    100%{
+        background: radial-gradient(white,#d12230);
+    }
+    
+}
 
 /*main familialabelle*/
 
