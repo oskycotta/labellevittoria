@@ -5,7 +5,7 @@
 
 
 /* ACA EMPIEZA EL CSS PARA CELULAR FORMATO VERTICAL*/
-@media screen and (min-width: 320px) and (max-width: 500px) {
+@media screen and (max-width: 768px) {
 
 body{
     display: grid;
@@ -21,18 +21,13 @@ main{
     position:fixed;
     width: 25vw;
 }
-.nav__ol, .submenu{
-    display: none;
+
+a.nav-link{
+    color: white;
 }
 
-header:hover .nav__ol{
-    position: fixed;
-    display: block;
-    left: 15vh;
-
-    height: 10vh;
-   
-    z-index: 2;    
+.nav__ol{
+    padding-left: 0px;
 }
 
 .item--contacto:hover .submenu{
@@ -40,34 +35,35 @@ header:hover .nav__ol{
     display: block;
     left: 15vh;
 
+    height: 15vh;
+   
+    z-index: 2;    
+}
+
+nav.container{
+    display: none;
+}
+
+header:hover nav.container{
+    position: fixed;
+    display: block;
+    left: 15vh;
+
     height: 10vh;
    
     z-index: 2;    
 }
 
-
 .item{
     display: grid;
-    width: 85vw;
+    width: 100%;
     border: outset 0.5px;
     padding: 3px 3px 3px 3px;
     background-color:  #d12230  ;
 }
 
-.subitem{
-    display: grid;
-    width: 50vw;
-    border: outset 0.5px;
-    padding: 3px 3px 3px 3px;
-    background-color: gray  ;
-    justify-content: end;
-}
-.subitem a{
-    jus;
-}
 
-
-a{
+a, .item-a{
     text-decoration: none;
     color: white;
 }
@@ -87,15 +83,18 @@ a{
     grid-area: h1;
     font-size: 150%;
     justify-self: end;
-    align-self: flex-end;
+    align-self: center;
     padding-right: 4vw;
+    text-align: end;
 }
 
 .h3{
     grid-area: h3;
     justify-self: end;
-    align-self: flex-start;
+    align-self:flex-start;
     padding-right: 4vw;
+    text-align: end;
+    font-size: 100% !important;
 
 }
 
@@ -110,11 +109,11 @@ video{
 .main__index{
     display: grid;
     grid-template-areas: 
-        "h1 h1 h1 "
-        "h3 h3 h3"
+        ".. h1 h1 "
+        ".. h3 h3"
         "video video video";
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 10vh 8vh 60vh ;
+    grid-template-columns: 23vw auto auto;
+    grid-template-rows: 8vh 8vh 62vh ;
     width: 100vw;
 }
 
@@ -129,6 +128,7 @@ video{
     justify-self: end;
     padding-top: 5vh;
     padding-right: 1.5vh;
+    font-size: 140%;
 }
 .img__quienesSomos{
     width: 60vw;
@@ -214,6 +214,7 @@ table{
     justify-self: end;
     padding-top: 3vh;
     padding-right: 1.5vh;
+    font-size: 130%;
 }
 
 form{
@@ -271,12 +272,174 @@ footer ul li a{
 
 
 }
+/*ACA EMPIEZA EL CSS PARA TABLET*/
+@media screen and (min-width: 769px) and (max-width: 991PX){
+
+#encabezado{
+    position:fixed;
+}
+body{
+    display: grid;
+    background:linear-gradient(  #f7a435 , white);
+}
 
 
+.nav__ol, .submenu{
+    display: none;
+}
 
+header:hover .nav__ol{
+    position: fixed;
+    display: block;
+    left: 15vh;
+
+    height: 10vh;
+   
+    z-index: 2;    
+}
+
+.item--contacto:hover .submenu{
+    position: fixed;
+    display: block;
+    left: 15vh;
+
+    height: 10vh;
+   
+    z-index: 2;    
+}
+
+
+.item{
+    display: grid;
+    width: 85vw;
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color:  #d12230  ;
+}
+
+a, .item-a{
+    text-decoration: none;
+    color: white;
+}
+
+.item--contacto{
+
+    border: outset 0.5px;
+    padding: 3px 3px 3px 3px;
+    background-color: #d12230  ;
+    color: white;
+    list-style-type: none;
+}
+
+
+.h1{
+    grid-area: h1;
+    font-size: 150%;
+    justify-self: end;
+    align-self: center;
+    padding-right: 4vw;
+    text-align: end;
+}
+
+.h3{
+    grid-area: h3;
+    justify-self: end;
+    align-self:flex-start;
+    padding-right: 4vw;
+    text-align: end;
+}
+
+video{
+    grid-area: video;
+    justify-self: center;
+    align-self: center;
+
+}
+
+.main__index{
+    display: grid;
+    grid-template-areas: 
+        "h1 h1 h1 "
+        "h3 h3 h3"
+        "video video video";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 8vh 8vh 62vh ;
+    width: 100vw;
+}
+
+/*productos tablet*/
+
+
+#body__productos{
+    display: grid;
+    grid-template-rows: 210vh 22vh;
+}
+
+.main__productos{
+    display: grid;
+    grid-template-rows: 15vh 60vh 60vh 60vh 25vh;
+}
+.main__productos--div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.main__productos--div img{
+    width: 150px;
+    height: 150px ;
+}
+table{
+    height: 15vh;
+}
+.h2__productos{
+    color:  #0e0e0d ;
+    text-align: end;
+    justify-self: end;
+    padding-top: 3vh;
+    padding-right: 1.5vh;
+
+}
+
+/* este es el footer para tablet vertical*/
+
+.footer__index, #pie{
+    width: 97vw;
+    grid-area: footer;
+    align-self: flex-end;
+}
+.footer__index--ul{
+    display: grid;
+    grid-template-rows: 5.5vw 5.5vw 5.5vw;
+    grid-row-gap: 4vw;
+    padding-bottom: 3vw;
+    padding-right: 3vw;
+    align-self: flex-end;
+}
+
+.footer__index--li{
+    display: grid;
+    justify-self: end;
+
+    
+}
+
+footer ul li a{
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+}
 /*ACA EMPIEZA EL CSS PARA ESCRITORIO*/
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 
+body{
+    background:linear-gradient(  #f7a435 , white);
+}
 
 /*esto es el header*/
 
@@ -286,11 +449,13 @@ footer ul li a{
     left: 0px;
     transition-duration:  1s;
     opacity: 0.5;
-
     width: 100px;
     z-index: 3;
 }
 
+a.item-a{
+    color: white;
+}
 .encabezado:hover{
     opacity: 1;
 }
@@ -355,6 +520,7 @@ footer ul li a{
 header{
     display: grid;
     align-content: center;
+    justify-content: center;
 }
 
 .nav{
@@ -364,6 +530,7 @@ header{
     position: fixed;   
     justify-content: center;
     align-content: center;
+    justify-self: center;
    
     z-index: 2;
 }
@@ -375,7 +542,7 @@ header{
     grid-template-columns:  0.2fr 0.4fr 0.5fr 0.7fr 0.2fr;
 }
 
-a{
+a, .item-a{
     text-decoration: none;
     color: white;
 }
@@ -397,12 +564,6 @@ a{
     grid-template-rows: 0.5fr 0.5fr;
     list-style-type: none;
 }
-
-.subitem{
-    background-color:  #d12230  ;
-}
-
-
 
 /*aca empieza el main*/
 
@@ -469,6 +630,11 @@ H3{
 }
 /* main quienessomos*/
 
+.main__quienesSomos{
+    display: grid;
+    justify-items: center;
+}
+
 .h2quienesSomos{
     color:  #0e0e0d ;
     text-align: center;
@@ -478,7 +644,7 @@ H3{
 
 p{
     width: 600px;
-    height: 200px;
+    height: 100%;
     text-align: center;
     padding-top: 20px;
 }
@@ -507,16 +673,6 @@ p{
     font-size: 40px;
     text-align: center;
 }
-
-div img{
-    width: 200px;
-    height: 200px;
-    transition-duration:  1s;
-    opacity: 0.5;
-}
-div img:hover{
-    opacity: 1;
-}
 table{
     margin-top: 30px;
     background-color:  #aaaeaa ;
@@ -535,6 +691,17 @@ table{
     }
     
 }
+
+div img{
+    width: 200px;
+    height: 200px;
+    transition-duration:  1s;
+    opacity: 0.5;
+}
+div img:hover{
+    opacity: 1;
+}
+
 
 /*main familialabelle*/
 
