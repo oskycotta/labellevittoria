@@ -1,0 +1,299 @@
+
+/*ACA EMPIEZA EL CSS PARA ESCRITORIO*/
+@media screen and (min-width: 992px) {
+
+    body{
+        background: $color-fondo;
+
+        header{
+            display: grid;
+            width: 70vw;
+            height: 5vh;
+            align-content: center;
+            justify-content: center;
+                .encabezado{
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    transition-duration:  1s;
+                    opacity: 0.5;
+                    width: 100px;
+                    z-index: 3;
+                        &:hover{
+                            opacity: 1;
+                        }
+                }
+                
+                #encabezado{
+                    z-index: 3;
+                    width: 100px;
+                    opacity: 1;
+                    position: fixed;
+                    left: 0px;
+                    top: 0px;
+                    animation-name: logo;
+                    animation-duration: 10s;
+                    animation-iteration-count: initial;
+                }
+                @keyframes logo {
+                    0%{
+                        opacity: 0.1;
+                        position: fixed;
+                        right: 15vw;
+                        top: 0px;
+                        height: 100%;
+                        width: auto;
+                    }
+                    50%{
+                        transform: translate(-30vw, );
+                        position: fixed;
+                        top: 0px;
+                        left: 25.7vw;
+                        opacity: 1;
+                        width: auto;
+                        height: 100%;
+                    }
+                    100%{
+                        width: 100px;
+                        opacity: 1;
+                        position: fixed;
+                        left: 0px;
+                        top: 0px;
+                    }
+                }
+                .nav{
+                    display: grid;
+                    width: 100vw;
+                    height: 10vw;
+                    position: fixed;   
+                    justify-content: center;
+                    align-content: center;
+                    justify-self: center;
+                   
+                    z-index: 2;
+                    .nav__ol {
+                        display: grid;
+                        justify-content: center;
+                        width: 50vw;
+                        grid-template-columns:  0.2fr 0.4fr 0.5fr 0.7fr 0.2fr;
+                        .item{
+                            display: grid;
+                            cursor: pointer;
+                        
+                            border: outset 0.5px;
+                            padding: 3px 3px 3px 3px;
+                            background-color:  #d12230  ;
+                            justify-self: center;
+                                a.item-a{
+                                    color: white;
+                                    text-decoration: none;
+                                }
+                        }
+                        .item--contacto{
+    
+                            border: outset 0.5px;
+                            padding: 3px 3px 3px 3px;
+                            background-color: #d12230  ;
+                            color: white;
+                            list-style-type: none;
+                            &:hover .submenu{
+                                display: grid;
+                                grid-template-rows: 0.5fr 0.5fr;
+                                list-style-type: none;
+                            }
+                            .submenu{
+                                display: none;
+                            }
+                        }                    
+                    }
+            }
+        }
+
+        /*aca empieza el main index*/
+        
+        #main__index{
+            animation-iteration-count: inherit;
+            animation-duration: 15s;
+            animation-name: main__index;
+        }
+        @keyframes main__index {
+            0%{
+                opacity: 0;
+            }
+            70%{
+                opacity: 0.4;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    
+        main{
+            background:linear-gradient(  #f7a435 , white);
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center ;
+            /*este es el main index*/
+            video{
+                height: 55vh;
+            }
+            h1 {
+                animation-name: rubberBand;
+                animation-delay: 10s;
+                animation-iteration-count: initial;
+                text-align: center;
+                padding-top: 110px; 
+                padding-bottom: 10px;
+                font-size: 40px;
+                font-family: monospace;
+            }
+    
+            H3{
+                color:  #0e0e0d ;
+                text-align: center;
+                padding-bottom: 25px;
+            }
+            
+            .descripcion{
+                overflow: hidden;
+                width: 600px;
+                height: 200px;
+                color: white;
+                text-align: center;
+            
+                position: relative;
+                left: 300px;
+            }
+            /*main contacto*/
+            .h2__contacto{
+                color:  #0e0e0d ;
+                text-align: center;
+                padding-top: 125px;
+                padding-bottom: 20px;
+            }
+            /*main familialabelle*/
+    
+            .h2__familiaLaBelle{
+                color:  #0e0e0d ;
+                text-align: center;
+                padding-top: 125px;
+            }
+            
+            form{
+                padding-top: 20px;
+                .form__personal{
+                    display: flex;
+                    flex-direction: column;
+                }
+                h5{
+                    padding-top: 10px;
+                    padding-bottom: 5px;
+                }
+            }
+                /*main contacto*/
+    
+        .h2__contacto{
+            color:  #0e0e0d ;
+            text-align: center;
+            padding-top: 125px;
+            padding-bottom: 20px;
+        }
+    }
+        /* main quienessomos*/ 
+        .main__quienesSomos{
+            display: grid;
+            justify-items: center;
+            .h2quienesSomos{
+                color:  #0e0e0d ;
+                text-align: center;
+                padding-top: 125px;
+                padding-bottom: 20px;
+            }
+            p{
+                width: 600px;
+                height: 100%;
+                text-align: center;
+                padding-top: 20px;
+            }
+        }
+
+    /*main productos*/
+    
+    .main__productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 1100px;
+        .h2__productos{
+    
+            padding-top: 125px;
+            padding-bottom: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+    
+        .main__productos--div{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 1000px;
+            img{
+                width: 200px;
+                height: 200px;
+                transition-duration:  1s;
+                opacity: 0.5;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+        }
+        table{
+            margin-top: 30px;
+            background-color:  #aaaeaa ;
+            animation-name: tabla;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes tabla {
+            0%{
+                background: radial-gradient(#d12230, white);
+            }
+            100%{
+                background: radial-gradient(white,#d12230);
+            }
+        }
+    }
+    
+    
+    
+
+    
+    
+    /* este es el footer*/
+    
+    footer {
+        .u {
+            list-style-type: none;
+        }
+        ul{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        list-style-type: none;
+            li{
+                a{
+                color: black;
+                font-size: 15px;
+                text-decoration: none !important;
+                 }
+                }
+            }
+        }
+}
+}

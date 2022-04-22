@@ -1,0 +1,266 @@
+
+/* ACA EMPIEZA EL CSS PARA CELULAR FORMATO VERTICAL*/
+@media screen and (max-width: 768px) {
+
+    #body__productos{
+        display: grid;
+        grid-template-rows: 210vh 30vh;
+    }
+    body{
+        display: grid;
+        height: 100vh;    
+        header{
+            &:hover nav.container{
+                position: fixed;
+                display: block;
+                left: 15vh;
+            
+                height: 10vh;
+            
+                z-index: 2;    
+            }
+         
+            .encabezado{
+                position:fixed;
+                width: 25vw;
+            }
+            nav.container{
+                display: none;
+                
+                .nav__ol{
+                    padding-left: 0px;
+                    .item{
+                        display: grid;
+                        width: 100%;
+                        border: outset 0.5px;
+                        padding: 3px 3px 3px 3px;
+                        background-color:  #d12230  ;
+                        a.nav-link{
+                            color: white;
+                        }
+                        a, .item-a{
+                            text-decoration: none;
+                            color: white;
+                        }
+                        
+                }
+                .item--contacto{
+                
+                    border: outset 0.5px;
+                    padding: 3px 3px 3px 3px;
+                    background-color: #d12230  ;
+                    color: white;
+                    list-style-type: none;
+                    &:hover .submenu{
+                        position: fixed;
+                        display: block;
+                        left: 15vh;
+                    
+                        height: 15vh;
+                    
+                        z-index: 2;    
+                    }
+                }
+            }
+        }
+ 
+        }
+        .main__index{
+            display: grid;
+            grid-template-areas: 
+                ".. h1 h1 "
+                ".. h3 h3"
+                "video video video";
+            grid-template-columns: 23vw auto auto;
+            grid-template-rows: 8vh 8vh 62vh ;
+            width: 100vw;
+        }
+
+        main{
+            background: $color-fondo;
+
+            /***main index de celular vertical*/
+    
+            .h1{
+                grid-area: h1;
+                font-size: 150%;
+                justify-self: end;
+                align-self: center;
+                padding-right: 4vw;
+                text-align: end;
+            }
+            
+            .h3{
+                grid-area: h3;
+                justify-self: end;
+                align-self:flex-start;
+                padding-right: 4vw;
+                text-align: end;
+                font-size: 100% !important;
+            
+            }
+            
+            video{
+                width: 95vw;
+                grid-area: video;
+                justify-self: center;
+                align-self: center;
+            
+            }
+            
+            }
+            
+            /*main quinessomos celular vertical*/
+            .main__quienesSomos{
+                display: grid;
+                width: 100vw;
+                grid-template-rows: 15vh 45vh 110vh 20vh;
+            
+                .h2quienesSomos{
+                    justify-self: end;
+                    padding-top: 5vh;
+                    padding-right: 1.5vh;
+                    font-size: 140%;
+                }
+                .img__quienesSomos{
+                    width: 60vw;
+                    align-self: center;
+                    justify-self: center;
+                }
+                .p__quienesSomos{
+                    width: 85vw;
+                    justify-self: center;
+                    text-align: center;
+                }
+            }
+            
+            
+            /*main contacto celular vertical*/
+            .main__contacto{
+                display: grid;
+                width: 100vw;
+                grid-template-rows: 15vh 65vh;    
+                .h2__contacto{
+                    width: 85vw;
+                    text-align: end;
+                    justify-self: end;
+                    padding-top: 3vh;
+                    padding-right: 1.5vh;
+                    font-size: 1.3rem;
+                }
+                iframe{
+                    width: 85vw;
+                    height: 50vh;
+                    align-self: center;
+                    justify-self: center;
+                }
+            }
+            /*productos formato vertical celu*/ 
+            
+            
+            .main__productos{
+                display: grid;
+                grid-template-rows: 15vh 60vh 60vh 60vh 25vh;
+                .main__productos--div{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    justify-items: center;
+                    align-items: center;
+                    img{
+                        width: 150px;
+                        height: 150px ;
+                    }
+                }
+                table{
+                    height: 15vh;
+                }
+                .h2__productos{
+                    color:  #0e0e0d ;
+                    text-align: end;
+                    justify-self: end;
+                    padding-top: 3vh;
+                    padding-right: 1.5vh;
+                
+                }
+            }
+            
+            
+            /*familialabelle formato vertical celu*/
+            .main__familiaLaBelle{
+                display: grid;
+                width: 100vw;
+                grid-template-rows: 15vh auto;
+            }
+            
+            .h2__familiaLaBelle{
+                color:  #0e0e0d ;
+                text-align: end;
+                justify-self: end;
+                padding-top: 3vh;
+                padding-right: 1.5vh;
+                font-size: 130%;
+            }
+            
+            form{
+                padding-top: 20px;
+                width: 85vw;
+                justify-self: center;
+
+                fieldset{
+                    textarea{
+                        width: 95%;
+                    }
+                }
+            
+            .form__personal{
+                display: flex;
+                flex-direction: column;
+            }
+            h5{
+                padding-top: 10px;
+                padding-bottom: 5px;
+            }
+            .botones__familiaLaBelle{
+                display: grid;
+                grid-template-rows: 5vh 5vh;
+                row-gap: 3vh;
+                justify-items: end;
+                height: 20vh;
+            }
+        }
+
+        }
+        /* este es el footer para celular vertical*/
+        
+        .footer__index, #pie{
+            width: 97vw;
+            grid-area: footer;
+            align-self: flex-end;
+            .footer__index--ul{
+                display: grid;
+                grid-template-rows: 5.5vw 5.5vw 5.5vw;
+                grid-row-gap: 4vw;
+                padding-bottom: 3vw;
+                padding-right: 3vw;
+                align-self: flex-end;
+                .footer__index--li{
+                    display: grid;
+                    justify-self: end;
+                
+                    
+                }
+            } 
+        }
+        footer {
+            ul {
+                li {
+                    a{
+            color: black;
+            list-style-type: none;
+            text-decoration: none;
+                    }
+                }
+            }
+        }
+}
