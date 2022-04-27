@@ -4,10 +4,10 @@
 
     body{
         background: $color-fondo;
-
+        width: 100vw;
         header{
             display: grid;
-            width: 70vw;
+            width: 100vw;
             height: 5vh;
             align-content: center;
             justify-content: center;
@@ -63,12 +63,11 @@
                 }
                 .nav{
                     display: grid;
-                    width: 100vw;
+                    width: 100vw ;
                     height: 10vw;
                     position: fixed;   
                     justify-content: center;
                     align-content: center;
-                    justify-self: center;
                    
                     z-index: 2;
                     .nav__ol {
@@ -76,6 +75,7 @@
                         justify-content: center;
                         width: 50vw;
                         grid-template-columns:  0.2fr 0.4fr 0.5fr 0.7fr 0.2fr;
+                        padding-left: 0px;
                         .item{
                             display: grid;
                             cursor: pointer;
@@ -240,15 +240,63 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
             width: 1000px;
-            img{
-                width: 200px;
-                height: 200px;
-                transition-duration:  1s;
-                opacity: 0.5;
-                    &:hover{
-                        opacity: 1;
+            div{
+                position: relative;
+                display: inline-block;
+                text-align: center;
+                img{
+                    width: 200px;
+                    height: 200px;
+                    transition-duration:  1s;
+                    opacity: 0.5;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        &:hover .texto{
+                            display: none;
+                        }
                     }
-                }
+                    @mixin titulos($color){
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $color;
+                        text-shadow: 0 0 2px #0e0e0d;
+                    }
+                    .titulo1 {@include titulos(yellow);}
+                    .titulo2 {@include titulos(orange);}
+                    .titulo3 {@include titulos(rgb(255, 81, 0));}
+                    .titulo4 {@include titulos(rgb(255, 60, 0));}
+
+                    .titulo9 {@include titulos(yellow);}
+                    .titulo10 {@include titulos(orange);}
+                    .titulo11 {@include titulos(rgb(255, 81, 0));}
+                    .titulo12 {@include titulos(rgb(255, 60, 0));}
+
+                    .titulos{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    .titulo5{
+                        @extend .titulos;
+                        color: yellow;
+                    }
+                    .titulo6{
+                        @extend .titulos;
+                        color:orange;
+                    }
+                    .titulo7{
+                        @extend .titulos;
+                        color: rgb(255, 81, 0);
+                    }
+                    .titulo8{
+                        @extend .titulos;
+                        color: rgb(255, 60, 0);
+                    }
+            }
         }
         table{
             margin-top: 30px;

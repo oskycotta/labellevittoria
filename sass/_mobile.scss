@@ -1,10 +1,11 @@
+$color-fondo: linear-gradient(  #f7a435 , white);
 
 /* ACA EMPIEZA EL CSS PARA CELULAR FORMATO VERTICAL*/
 @media screen and (max-width: 768px) {
 
     #body__productos{
         display: grid;
-        grid-template-rows: 210vh 30vh;
+        grid-template-rows: 420vh 30vh;
     }
     body{
         display: grid;
@@ -160,20 +161,52 @@
             
             .main__productos{
                 display: grid;
-                grid-template-rows: 15vh 60vh 60vh 60vh 25vh;
+                grid-template-rows: 15vh 125vh 125vh 125vh 50vh;
+                width: 100vw;
                 .main__productos--div{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: auto auto;
-                    justify-items: center;
-                    align-items: center;
-                    img{
-                        width: 150px;
-                        height: 150px ;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    padding-bottom: 30px;
+                    padding-top: 10px;
+                    
+                        div{
+                        position: relative;
+                        display: inline-block;
+                        text-align: center;
+                        padding-bottom: 20px;
+                            img{
+                                width: 150px;
+                                height: 150px ;
+                            }
+                            @mixin titulos($color){
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: $color;
+                                text-shadow: 0 0 2px #0e0e0d;
+                            }
+                            .titulo1 {@include titulos(yellow);}
+                            .titulo2 {@include titulos(orange);}
+                            .titulo3 {@include titulos(rgb(255, 81, 0));}
+                            .titulo4 {@include titulos(rgb(255, 60, 0));}
+                            .titulo5 {@include titulos(yellow);}
+                            .titulo6 {@include titulos(orange);}
+                            .titulo7 {@include titulos(rgb(255, 81, 0));}
+                            .titulo8 {@include titulos(rgb(255, 60, 0));}
+                            .titulo9 {@include titulos(yellow);}
+                            .titulo10 {@include titulos(orange);}
+                            .titulo11 {@include titulos(rgb(255, 81, 0));}
+                            .titulo12 {@include titulos(rgb(255, 60, 0));}
+        
                     }
                 }
                 table{
-                    height: 15vh;
+                    width: 90vw;
+                    align-self: center;
+                    display: flex;
+                    justify-self: center;
                 }
                 .h2__productos{
                     color:  #0e0e0d ;
